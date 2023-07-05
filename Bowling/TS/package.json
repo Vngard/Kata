@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": " mocha -r ts-node/register test/mocha.spec.ts",
+    "test:watch": " mocha -r ts-node/register --watch --watch-files domains/**/*.ts,test/*.ts test/mocha.spec.ts"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +20,7 @@
     "chai": "^4.3.7",
     "mocha": "^10.2.0",
     "sinon": "^15.2.0",
-    "typescript": "^5.1.6"
+    "typescript": "^5.1.6",
+    "ts-node": "^10.9.1"
   }
 }
